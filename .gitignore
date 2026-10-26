@@ -1,0 +1,13 @@
+# Local configuration (copy from config/config.example.R)
+config/config.R
+
+# Data, results and R session files
+*.rds
+*.RData
+*.Rhistory
+.Rproj.user/
+*.pdf
+*.xlsx
+
+# macOS
+.DS_Store
