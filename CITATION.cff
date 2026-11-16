@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "scrna-cellstate-similarity: transcriptional similarity between annotated cell states across single-cell RNA-seq datasets"
+abstract: >-
+  R pipeline that quantifies the transcriptional similarity between cell
+  states annotated in two single-cell RNA-seq datasets, typically a human
+  reference atlas and a mouse model, using three complementary readouts:
+  elastic-net logistic regression, Spearman correlation of z-scored
+  pseudobulk profiles, and SingleR label transfer, on a shared 1:1 ortholog
+  gene universe with symmetric renormalisation.
+authors:
+  - family-names: "Andres Ejarque"
+    given-names: "Rosa"
+    orcid: "https://orcid.org/0000-0003-0012-1155"
+    affiliation: "King's College London"
+version: "1.0.0"
+date-released: "2026-11-16"
+license: MIT
+repository-code: "https://github.com/r-andrese/scrna-cellstate-similarity"
+keywords:
+  - single-cell RNA-seq
+  - cell-state annotation
+  - cross-species comparison
+  - mouse models
+  - SingleR
+  - R

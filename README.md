@@ -53,6 +53,18 @@ informative than any single one.
   openxlsx
 - Bioconductor: SingleR, scran, ComplexHeatmap
 
+## Installation
+
+Clone the repository and install the packages from CRAN and Bioconductor:
+
+```r
+install.packages("BiocManager")
+BiocManager::install(c(
+  "Seurat", "SeuratObject", "Matrix", "glmnet", "babelgene", "circlize", "openxlsx",  # CRAN
+  "SingleR", "scran", "ComplexHeatmap"                                                # Bioconductor
+))
+```
+
 ## Inputs
 
 Two Seurat objects saved with `saveRDS()`, each with:
@@ -246,6 +258,22 @@ In this example all three readouts recover the simulated correspondences, and
   Cell 184, 792-809 (2021), which builds on the approach of Young MD et al.
   Single-cell transcriptomes from human kidneys reveal the cellular identity
   of renal tumors. Science 361, 594-599 (2018).
+
+## How to cite
+
+If you use this pipeline, please cite the software:
+
+> Andres Ejarque R. *scrna-cellstate-similarity: transcriptional similarity
+> between annotated cell states across single-cell RNA-seq datasets*
+> (version 1.0.0). 2026.
+> https://github.com/r-andrese/scrna-cellstate-similarity
+
+## Author and contact
+
+Rosa Andres Ejarque, King's College London.
+
+Questions, bug reports and suggestions are welcome as
+[GitHub issues](https://github.com/r-andrese/scrna-cellstate-similarity/issues).
 
 ## Licence
 

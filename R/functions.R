@@ -285,11 +285,9 @@ cor_hvg <- function(n, ref_pb, test_pb, hvg_ref, hvg_test) {
 ## Offset equal to the log-odds of the positive class, so that the fitted
 ## coefficients describe deviation from the class prior.
 getPopulationOffset <- function(y) {
-  if (!is.factor(y)) y <- factor(y)
-  if (length(levels(y)) != 2) stop("y must be a two-level factor")
-  off <- sum(y == levels(y)[2]) / length(y)
-  off <- log(off / (1 - off))
-  rep(off, length(y))
+  y <- factor(y)
+  if (nlevels(y) != 2) stop("y must be a two-level factor")
+  rep(stats::qlogis(mean(y == levels(y)[2])), length(y))
 }
 
 ## One-vs-rest elastic-net logistic regression. A model is trained for each
